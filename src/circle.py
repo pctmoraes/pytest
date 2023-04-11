@@ -1,13 +1,13 @@
 import math
 
 class Circle:
-    def __init__(self, area):
-        if type(area) not in [int, float]:
+    def __init__(self, radius):
+        if type(radius) not in [int, float]:
             raise TypeError("The radius must be either int or float type")
-        if area < 0:
+        if radius < 0:
             raise ValueError("The radius must be greater than or equal to zero")
         
-        self.area = area
+        self.radius = radius
         
     def get_area(self):
         """
@@ -16,7 +16,7 @@ class Circle:
         Returns:
             A float representing the area of the circle
         """
-        area = math.pi * (self.area ** 2)
+        area = math.pi * (self.radius ** 2)
         return area
     
     def get_circumference(self):
@@ -26,6 +26,6 @@ class Circle:
         Returns:
             A float representing the circumference of the circle
         """
-        circumference = math.pi * self.area * 2
+        circumference = math.pi * self.radius * 2
         return circumference
 
